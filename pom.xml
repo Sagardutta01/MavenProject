@@ -42,6 +42,7 @@
 			<artifactId>chaintest-core</artifactId>
 			<version>1.0.1</version>
 		</dependency>
+		
 
 		<!-- Selenium -->
 		<dependency>
@@ -62,7 +63,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.10.1</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- SLF4J with exclusions -->

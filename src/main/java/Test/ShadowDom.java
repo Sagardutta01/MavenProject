@@ -1,29 +1,28 @@
+package Test;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SVGelement {
+public class ShadowDom {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://svgomg.net/");
+		driver.get("https://practice.expandtesting.com/shadowdom");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
-		//WebElement uploadIcon = driver.findElement(By.xpath("//*[@class='icon']//*[name()='path']"));
-		//uploadIcon.click();
+		SearchContext shadow0 = driver.findElement(By.cssSelector("#shadow-host")).getShadowRoot();
+		String text = shadow0.findElement(By.cssSelector("#my-btn")).getText();
 		
-		driver.findElement(By.xpath("//*[name()='path' and contains(@d,'M9 16h6v-6')]")).click();
-		
-
+		System.out.println(text);
 	}
 
 }
