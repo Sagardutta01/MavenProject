@@ -45,7 +45,7 @@ public class Checkbox {
 		for(WebElement j : checkbox) {
 			j.click();
 		}
-		Assert.assertTrue(false);
+		
 		
 	}
 	
