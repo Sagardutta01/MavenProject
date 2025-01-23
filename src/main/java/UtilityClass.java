@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-public class UtilityClass extends TestTest {
+public class UtilityClass extends Checkbox {
 	
 
 	

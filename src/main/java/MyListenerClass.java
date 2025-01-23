@@ -4,7 +4,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class MyListenerClass extends TestTest implements ITestListener{
+public class MyListenerClass extends Checkbox implements ITestListener{
 	
 
 	  public void onTestStart(ITestResult result) {
